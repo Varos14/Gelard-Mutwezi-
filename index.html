@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f4ed" />
+  <meta name="description" content="Meet Gelard Mutwezi, a Kampala-based IT graduate who builds web applications and works in IT support and data analysis." />
+  <title>Gelard Mutwezi — Software Developer &amp; IT Support</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #292d27;
+      --muted: #696d63;
+      --paper: #f6f4ed;
+      --white: #fffefb;
+      --line: #e1e3d8;
+      --accent: #657650;
+      --accent-dark: #43563c;
+      --accent-light: #c7d2b7;
+      --dark: #29362e;
+      --dark-soft: #35443a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+      --content: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 20;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      transform: translateY(-160%);
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fffefb;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .container {
+      width: min(var(--content), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      border-bottom: 1px solid rgb(255 255 255 / 12%);
+      background: rgb(48 62 52 / 97%);
+      color: #faf9f3;
+    }
+
+    .nav-wrap {
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: #faf9f3;
+      font-size: 14px;
+      font-weight: 750;
+      letter-spacing: .02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fffefb;
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #e2e6dc;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color .18s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fffefb;
+    }
+
+    .nav-links .nav-contact {
+      padding: 9px 15px;
+      border: 1px solid rgb(199 210 183 / 55%);
+      border-radius: 6px;
+      color: #e2e6dc;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgb(250 249 243 / 30%);
+      border-radius: 8px;
+      background: transparent;
+      color: #faf9f3;
+      font: inherit;
+      font-size: 21px;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      min-height: 552px;
+      grid-template-columns: 1.12fr .88fr;
+      align-items: center;
+      gap: 68px;
+      padding-top: 68px;
+      padding-bottom: 76px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 22px;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+      margin-bottom: 18px;
+      font-family: var(--serif);
+      font-size: clamp(52px, 7vw, 82px);
+      font-weight: 500;
+      letter-spacing: -.055em;
+      line-height: .99;
+    }
+
+    .hero h1 span {
+      color: var(--accent-dark);
+    }
+
+    .hero-lead {
+      max-width: 570px;
+      margin-bottom: 28px;
+      color: #5d645a;
+      font-size: clamp(17px, 2vw, 19px);
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 11px 18px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #fffefb;
+    }
+
+    .button-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .button-secondary {
+      border-color: #929e87;
+      color: var(--ink);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--accent);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 20px;
+      color: #62685d;
+      font-size: 13px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-meta svg {
+      width: 15px;
+      height: 15px;
+      color: var(--accent);
+    }
+
+    .portrait-card {
+      position: relative;
+      width: min(100%, 390px);
+      justify-self: end;
+      overflow: hidden;
+      padding: 9px;
+      border: 1px solid #e0e2d7;
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 14px 36px rgb(41 54 46 / 12%);
+    }
+
+    .portrait-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      border-radius: 4px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+
+    .portrait-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 5px 3px;
+      color: #6c6a61;
+      font-size: 12px;
+    }
+
+    .portrait-caption strong {
+      color: var(--accent-dark);
+      font-size: 13px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-heading {
+      max-width: 660px;
+      margin-bottom: 38px;
+    }
+
+    .section-kicker {
+      margin-bottom: 12px;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-bottom: 13px;
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 500;
+      letter-spacing: -.04em;
+      line-height: 1.12;
+    }
+
+    .section-intro {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .about-copy {
+      color: #55564f;
+      font-size: 16px;
+    }
+
+    .about-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-note {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--accent);
+      background: #e9ede3;
+      color: #42473e;
+      font-family: var(--serif);
+      font-size: 17px;
+      font-style: italic;
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+      margin-top: 48px;
+    }
+
+    .capability {
+      min-height: 154px;
+      padding: 21px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--white);
+    }
+
+    .capability-number {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--accent-dark);
+      font-family: var(--serif);
+      font-size: 14px;
+    }
+
+    .capability h3 {
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    .capability p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .projects-section {
+      background: #e9ede5;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      display: flex;
+      min-height: 330px;
+      flex-direction: column;
+      padding: 27px;
+      border: 1px solid #dfe2d8;
+      border-radius: 6px;
+      background: #fffefb;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgb(41 54 46 / 8%);
+    }
+
+    .project-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 21px;
+    }
+
+    .project-index {
+      color: var(--accent-dark);
+      font-family: var(--serif);
+      font-size: 14px;
+    }
+
+    .project-icon {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      place-items: center;
+      border-radius: 6px;
+      background: #edf0e7;
+      color: var(--accent-dark);
+    }
+
+    .project-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -.02em;
+      line-height: 1.2;
+    }
+
+    .project-card p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .project-outcome {
+      margin: auto 0 19px;
+      padding: 12px 14px;
+      border-radius: 6px;
+      background: #f0f1e9;
+      color: #4d4b43;
+      font-size: 13px;
+    }
+
+    .project-outcome strong {
+      color: var(--accent-dark);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border: 1px solid #e1e3d8;
+      border-radius: 4px;
+      color: #5f5d55;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 72px;
+    }
+
+    .experience-aside {
+      position: sticky;
+      top: 110px;
+      align-self: start;
+    }
+
+    .experience-aside p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-dark);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .timeline {
+      border-left: 1px solid #d9ddd2;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 33px 28px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      position: absolute;
+      top: 7px;
+      left: -5px;
+      width: 9px;
+      height: 9px;
+      border: 2px solid var(--paper);
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    .timeline-date {
+      margin-bottom: 6px;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 3px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .timeline-place {
+      margin-bottom: 12px;
+      color: #77746a;
+      font-size: 13px;
+    }
+
+    .timeline-item p:last-child {
+      margin-bottom: 0;
+      color: #55564f;
+      font-size: 14px;
+    }
+
+    .skills-section {
+      background: #303e34;
+      color: #faf9f3;
+    }
+
+    .skills-section .section-kicker {
+      color: var(--accent-light);
+    }
+
+    .skills-section .section-intro {
+      color: #d7ddd1;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill-group {
+      padding: 21px;
+      border: 1px solid rgb(255 255 255 / 17%);
+      border-radius: 6px;
+      background: rgb(255 255 255 / 4%);
+    }
+
+    .skill-group h3 {
+      margin-bottom: 14px;
+      color: var(--accent-light);
+      font-size: 13px;
+    }
+
+    .skill-group p {
+      margin-bottom: 0;
+      color: #e2e6dc;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .education-section {
+      padding-top: 78px;
+      padding-bottom: 78px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .education-card {
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--white);
+    }
+
+    .education-card .timeline-date {
+      margin-bottom: 7px;
+    }
+
+    .education-card h3 {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .education-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-section {
+      padding-top: 76px;
+      padding-bottom: 76px;
+      background: var(--dark-soft);
+      color: #faf9f3;
+      text-align: center;
+    }
+
+    .contact-section .section-kicker {
+      color: var(--accent-light);
+    }
+
+    .contact-section .section-title {
+      max-width: 700px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .contact-section .section-intro {
+      max-width: 570px;
+      margin: 0 auto 25px;
+      color: #d7ddd1;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 18px 26px;
+      margin-top: 26px;
+    }
+
+    .contact-links a {
+      color: #f2f3ed;
+      font-size: 13px;
+      text-decoration-color: rgb(242 243 237 / 45%);
+      text-underline-offset: 4px;
+    }
+
+    .site-footer {
+      padding: 18px 0;
+      background: #253129;
+      color: #c9d0c3;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px 20px;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+
+    .footer-top {
+      color: #e1e7d9;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        min-height: auto;
+        grid-template-columns: 1fr .8fr;
+        gap: 34px;
+      }
+
+      .portrait-card {
+        width: min(100%, 340px);
+      }
+
+      .about-grid,
+      .experience-grid {
+        gap: 38px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .skills-grid .skill-group:last-child {
+        grid-column: span 2;
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      html {
+        scroll-padding-top: 70px;
+      }
+
+      .container {
+        width: min(var(--content), calc(100% - 36px));
+      }
+
+      .nav-wrap {
+        min-height: 64px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 63px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 18px 16px;
+        border-bottom: 1px solid rgb(255 255 255 / 12%);
+        background: #303e34;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        padding: 12px 8px;
+      }
+
+      .nav-links .nav-contact {
+        margin-top: 7px;
+        text-align: center;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 68px;
+        padding-bottom: 58px;
+      }
+
+      .hero h1 {
+        font-size: clamp(54px, 15vw, 74px);
+      }
+
+      .hero-lead {
+        font-size: 16px;
+      }
+
+      .portrait-card {
+        width: min(100%, 360px);
+        justify-self: center;
+        transform: none;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .about-grid,
+      .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .experience-aside {
+        position: static;
+      }
+
+      .projects-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        min-height: 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .skill-group {
+        padding: 16px;
+      }
+
+      .contact-section {
+        padding: 65px 0;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .capability-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid .skill-group:last-child {
+        grid-column: span 1;
+      }
+
+      .hero-meta {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Gelard Mutwezi home">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Gelard Mutwezi</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Full-Stack Development · IT Support · Data Analysis</p>
+          <h1>Gelard<br /><span>Mutwezi.</span></h1>
+          <p class="hero-lead">I’m Gelard, an IT graduate in Kampala. I enjoy building web apps and helping people solve everyday tech problems.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="mailto:geraldvaros@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="GELARD%20MUTWEZI%20RESUME.pdf" download>Download my CV <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-meta" aria-label="Contact and location">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Kampala, Uganda
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <a href="mailto:geraldvaros@gmail.com">geraldvaros@gmail.com</a>
+            </span>
+          </div>
+        </div>
+
+        <figure class="portrait-card">
+          <img src="gelard-mutwezi.jpg" alt="Portrait of Gelard Mutwezi" width="768" height="996" fetchpriority="high" />
+          <figcaption class="portrait-caption">
+            <strong>Gelard Mutwezi</strong>
+            <span>Kampala, Uganda</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="section-heading">
+          <p class="section-kicker">A little about me</p>
+          <h2 class="section-title">A bit about me.</h2>
+          <p class="section-intro">I like making technology useful—and helping people feel comfortable using it.</p>
+        </div>
+        <div class="about-copy">
+          <p>I’m Gelard, an IT graduate based in Kampala. I’m interested in both sides of technology: building software and helping people when their devices or systems need attention.</p>
+          <p>On the Wampeewo Ntake SS project, I’ve been developing a competency management system for student activities, assignments, skills, and attendance. During my internship at the Equal Opportunities Commission, I helped staff with workstation, network, account, and printer issues.</p>
+          <p>I enjoy learning by doing, asking questions, and seeing a task through. Whether I’m working on an app or troubleshooting a connection, I want the result to be clear and genuinely useful.</p>
+          <div class="about-note">I like understanding the problem first, then finding a practical way to solve it.</div>
+        </div>
+      </div>
+      <div class="container capability-grid" aria-label="Areas of focus">
+        <article class="capability">
+          <span class="capability-number">01 / Software</span>
+          <h3>Web applications</h3>
+          <p>I build features for the interface, the API, and the database behind it.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-number">02 / Data</span>
+          <h3>Analysis &amp; reporting</h3>
+          <p>I use Excel and Power BI to organize information and make clear reports.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-number">03 / IT support</span>
+          <h3>Everyday technology</h3>
+          <p>I’ve helped staff troubleshoot computers, printers, user accounts, and networks.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-number">04 / Good practice</span>
+          <h3>Careful, reliable work</h3>
+          <p>I pay attention to access, security, backups, and keeping systems maintained.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Projects</p>
+          <h2 class="section-title">Some things I’ve worked on.</h2>
+          <p class="section-intro">From a school management platform to database design and GIS mapping.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="project-index">PROJECT 01</span>
+              <span class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11m8-11v11"/></svg>
+              </span>
+            </div>
+            <h3>Wampeewo Competency CMS</h3>
+            <p>A platform for managing student activities, assignments, skills, attendance, and class information.</p>
+            <div class="project-outcome"><strong>My work:</strong> I’ve built dashboards, role-based pages, timetables, class notes, and backend features.</div>
+            <div class="tag-list" aria-label="Technologies used">
+              <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MySQL</span><span class="tag">Docker</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="project-index">PROJECT 02</span>
+              <span class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6M4 9l8 5 8-5"/></svg>
+              </span>
+            </div>
+            <h3>Undergraduate Capstone Information System</h3>
+            <p>My undergraduate capstone explored how an information system could address an organizational data-management need.</p>
+            <div class="project-outcome"><strong>My work:</strong> I analyzed the system, mapped its data flows, and designed a normalized relational database.</div>
+            <div class="tag-list" aria-label="Project topics">
+              <span class="tag">Systems analysis</span><span class="tag">Relational databases</span><span class="tag">ER diagrams</span><span class="tag">Security</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="project-index">PROJECT 03</span>
+              <span class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+            </div>
+            <h3>Secure API &amp; PDF reporting</h3>
+            <p>Backend features for the Competency CMS, including secure access and downloadable student performance summaries.</p>
+            <div class="project-outcome"><strong>My work:</strong> I added role-based access, API protections, request limiting, and PDF report generation.</div>
+            <div class="tag-list" aria-label="Technologies used">
+              <span class="tag">REST APIs</span><span class="tag">JWT</span><span class="tag">Express</span><span class="tag">PDFKit</span><span class="tag">Sequelize</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="project-index">PROJECT 04</span>
+              <span class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4.5-4.5-8-8.5-8-12a8 8 0 1 1 16 0c0 3.5-3.5 7.5-8 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              </span>
+            </div>
+            <h3>GIS spatial mapping</h3>
+            <p>I worked with geographic data to explore locations, demographic patterns, and infrastructure on maps.</p>
+            <div class="project-outcome"><strong>Academic result:</strong> Earned an A grade (85%) in project evaluation.</div>
+            <div class="tag-list" aria-label="Project topics">
+              <span class="tag">GIS</span><span class="tag">Spatial data</span><span class="tag">Mapping APIs</span><span class="tag">Python</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container experience-grid">
+        <div class="experience-aside">
+          <p class="section-kicker">Experience</p>
+          <h2 class="section-title">Where I’ve gained experience.</h2>
+          <p>My experience includes hands-on IT support and developing a full-stack school management system.</p>
+          <a class="text-link" href="GELARD%20MUTWEZI%20RESUME.pdf" download>View full resume <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <p class="timeline-date">Mar 2025 — May 2026</p>
+            <h3>Junior IT Specialist Intern</h3>
+            <p class="timeline-place">Equal Opportunities Commission · Kingdom Kampala</p>
+            <p>Supported staff across departments by resolving workstation and peripheral issues, maintaining LAN connectivity, managing user access, and carrying out routine maintenance and troubleshooting.</p>
+          </article>
+          <article class="timeline-item">
+            <p class="timeline-date">Jan 2024 — Present</p>
+            <h3>Full-Stack Developer &amp; Software Engineer</h3>
+            <p class="timeline-place">Wampeewo Ntake SS Project · Kampala</p>
+            <p>Developing a competency management platform with React, TypeScript, Node.js, Express, and MySQL. Work includes application features, REST APIs, database migrations, access controls, and PDF reporting.</p>
+          </article>
+          <article class="timeline-item">
+            <p class="timeline-date">May 2024 — Aug 2024</p>
+            <h3>IT Specialist / Industrial Training Intern</h3>
+            <p class="timeline-place">Victoria University · Kampala</p>
+            <p>Completed an industrial training placement as part of my Bachelor of Information Technology.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Skills</p>
+          <h2 class="section-title">Tools I use.</h2>
+          <p class="section-intro">The technologies and tools I’ve used in projects, coursework, and IT support.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Languages</h3>
+            <p>TypeScript<br />JavaScript (ES6+)<br />SQL<br />Python<br />HTML5 · CSS3</p>
+          </article>
+          <article class="skill-group">
+            <h3>Frontend</h3>
+            <p>React.js · Vite<br />Tailwind CSS<br />Zustand<br />React Router<br />React Hook Form</p>
+          </article>
+          <article class="skill-group">
+            <h3>Backend &amp; data</h3>
+            <p>Node.js · Express.js<br />RESTful APIs<br />Sequelize ORM<br />MySQL · SQLite<br />PDFKit · JWT</p>
+          </article>
+          <article class="skill-group">
+            <h3>Data analysis</h3>
+            <p>Microsoft Power BI<br />Microsoft Excel<br />Data analysis &amp; reporting</p>
+          </article>
+          <article class="skill-group">
+            <h3>IT &amp; delivery</h3>
+            <p>Docker · Git<br />GitHub Actions<br />Linux / Bash<br />LAN · TCP/IP<br />Hardware &amp; OS support</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Education</p>
+          <h2 class="section-title">What I studied.</h2>
+        </div>
+        <div class="education-grid">
+          <article class="education-card">
+            <p class="timeline-date">2022 — 2025</p>
+            <h3>Bachelor of Information Technology</h3>
+            <p>Victoria University · Kampala, Uganda</p>
+          </article>
+          <article class="education-card">
+            <p class="timeline-date">2020 — 2022</p>
+            <h3>Uganda Advanced Certificate of Education (UACE)</h3>
+            <p>London College of St. Lawrence · Maya, Uganda</p>
+          </article>
+          <article class="education-card">
+            <p class="timeline-date">2016 — 2019</p>
+            <h3>Uganda Certificate of Education (UCE)</h3>
+            <p>London College of St. Lawrence · Maya, Uganda</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <p class="section-kicker">Get in touch</p>
+        <h2 class="section-title">Looking for a new team.</h2>
+        <p class="section-intro">I’m looking for opportunities in software development, IT support, or data analysis. If you think I could be a fit, I’d be glad to hear from you.</p>
+        <a class="button button-primary" href="mailto:geraldvaros@gmail.com">Email Gelard <span aria-hidden="true">↗</span></a>
+        <div class="contact-links">
+          <a href="tel:+256772676944">+256 772 676 944</a>
+          <a href="https://www.linkedin.com/in/gerald-varos-3019ab2b1" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/Varos14" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year">2026</span> Gelard Mutwezi · Kampala, Uganda</p>
+      <a class="footer-top" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#primary-navigation");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      menuToggle.textContent = isOpen ? "☰" : "×";
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
+        navigation.classList.remove("is-open");
+      }
+    });
+
+    document.querySelector("#current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
